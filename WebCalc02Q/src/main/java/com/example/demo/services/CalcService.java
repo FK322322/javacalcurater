@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import org.springframework.stereotype.Component;
 
@@ -55,7 +56,7 @@ public class CalcService {
 	{
 		BigDecimal AdA = new BigDecimal(NumA);
 		BigDecimal AdB= new BigDecimal(NumB);
-		BigDecimal AdR =AdA.divide(AdB,3, BigDecimal.ROUND_HALF_UP);
+		BigDecimal AdR = AdA.divide(AdB,7,RoundingMode.HALF_UP);
 		String AdResult = AdR.toString();
 				return AdResult;
 
